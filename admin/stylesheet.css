@@ -1,0 +1,249 @@
+p{
+	text-align: left;
+}
+.regular{
+	font-size: 10px;
+	font-family: arial;
+	color: #000;	
+}
+
+/* Show Item Style */
+.description_content{
+	margin-left: 10px;
+	width: 350px;
+	font-family: arial, verdana, helvetica;
+	font-size: 12px;
+	padding-top: 10px;
+}
+#price{
+	padding-top: 20px;
+	margin-left: 10px;
+	font-size: 16px;
+	font-family: arial;
+	font-weight: 900;
+	color: #b73925;
+	display: block;
+}
+#price .original{
+	text-decoration: line-through;
+	font-size: 12px;
+	color: #999;
+}
+#price .sale{
+	
+}
+.product_list_name a{
+	font-weight: bold;
+	font-size: 15px;
+	color: #B73925;
+}
+.product_subtype{
+	color: #999;
+	font-weight: 900;
+	font-size: 12px;
+	font-family: arial;
+}
+.price{
+	color: #b73925;
+	font-weight: 900;
+}
+.original_price{
+	font-size: 12px;
+	font-family: arial;
+	color: #000;
+}
+.original_price a{
+	color: #000;
+	text-decoration: none;
+}
+.sale_price{
+	font-size: 12px;
+	font-family: arial;
+	color: #ff0000;
+	font-weight: 900;
+}
+.sale_price a{
+	color: #ff0000;
+	text-decoration: none;
+}
+#cart_add{
+	display: block;
+	margin-right: 30px;
+	margin-top: 10px;
+	margin-left: 9px;
+}
+.bullet_points{
+	margin-left: 45px;
+	width: 300px;
+	padding-top: 20px;
+	font-family: arial, verdana, helvetica;
+	font-size: 12px;
+}
+.bullet_points li{
+	padding: 2px;
+	font-size: 12px;
+}
+.producttitle{
+	font-size: 18px;
+	padding: none;
+	margin: none;
+	padding-top: 10px;
+	color: #b73925;
+	font-family: verdana, helvetica, arial;
+	font-weight: 900;
+	margin-bottom: 8px;
+}
+
+/* Galleria Style */
+.galleria_container{
+	margin-bottom: 10px;
+}
+.galleria_container img{
+	border: 1px solid #ccc;
+	padding: 1px;
+	max-height: 300px;
+	max-width: 250px;
+}
+
+.nav{
+	padding-top:15px;
+	clear:both;
+}
+
+.info{
+	text-align:left;
+	margin:30px 0;
+	border-top:1px dotted #221;
+	padding-top:30px;
+	clear:both;
+}
+.info p{
+	margin-top:1.6em;
+}
+
+.nav{
+	position:absolute;
+	top:310px;
+	left:0;
+}
+
+.galleria{
+	list-style:none;
+	width:300px;
+	position: relative;
+}
+.galleria li{
+	display:block;
+	width:76px;
+	height:76px;
+	overflow:hidden;
+	float:left;
+	margin:0 10px 10px 0;
+	border: 1px solid #ccc;
+}
+.galleria li a{
+	display:none
+}
+.galleria li div{
+	position:absolute;
+	display:none;
+	top:0;
+	left:180px;
+}
+.galleria li div img{
+	cursor:pointer;
+}
+.galleria li.active div img,.galleria li.active div{
+	display:block;
+}
+.galleria li img.thumb{
+	cursor:pointer;
+	top:auto;
+	left:auto;
+	display:block;
+	width:auto;
+	height:auto;
+}
+.galleria li .caption{
+	display:block;
+	padding-top:.5em;
+}
+* html .galleria li div span{width:400px} /* MSIE bug */
+
+
+
+/*		DRAG AND DROP - TEST STYLE SHEET	*/
+/* {	margin: 0; padding: 0; } */
+
+#info {
+	display: block;
+	padding: 10px; margin-bottom: 20px;
+	border: 1px solid #333;
+	background-color: #efefef;
+}
+
+.test-list {
+	list-style: none;
+}
+
+.test-list li {
+	display: block;
+	padding: 10px 10px; margin-bottom: 3px;
+	text-align: left;
+}
+
+.test-list li img.handle {
+	margin-right: 20px;
+	cursor: move;
+}
+
+
+
+
+
+	#sortlist {
+		width: 740px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		text-align:left;
+		}
+	#sortlist img.sorting {
+		float: left;
+		margin: 4px;
+		padding: 4px;
+		border: 1px solid #ccc;
+		}
+	#sortlist img {
+		margin: 4px;
+	}
+	#sortlist img.sorting:hover { 
+		float: left;
+		margin: 4px;
+		padding: 4px;
+		border: 1px solid #666; 
+		cursor: move;
+		}
+	#activityIndicator, #changeNotification {
+		text-align: center;
+		font: normal 1em georgia, arial, helvetica;
+		}
+	h1 {
+		font: normal 2em georgia, arial, helvetica;
+		margin: 0;
+		padding: 0;
+		color: #D35619;
+		}
+	#tagLine {		
+		color: #d39819;
+		margin: 0 0 15px 0;
+		font-style: italic;
+		font-size: 1.05em;
+		font-family: georgia, arial, helvetica;
+		}		
+	#credits {
+		font: normal 66% verdana, helvetica, arial; 
+		padding: 0.5em 0;
+		margin: 2em 0; 
+		border-top: 1px dotted #c0c0c0;
+		border-bottom: 1px dotted #c0c0c0;
+		}		

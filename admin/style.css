@@ -1,0 +1,877 @@
+body {
+	padding-top: 28px !important;
+	font-family: verdana,arial,sans-serif;
+	font-size: 12px;
+}
+
+pre {
+	/*display: none;*/
+}
+
+div {
+	text-align: left;
+}
+
+a{
+	color: #0000ff;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a img {
+	border: none;
+}
+input{
+	font-size: 12px;
+	font-family: arial;
+}
+
+input[type="text"]{
+	border: 1px solid #CDCED0;
+}
+
+input[type="checkbox"] {
+	position: relative;
+	top: 2px;
+}
+
+p {
+	line-height: 18px;
+	padding: 0.5em 10px;
+	margin: 0;
+}
+table {
+	font-family: verdana,arial,sans-serif;
+}
+/***** Useful Classes *****/
+
+.Clear {
+	clear: both; 
+	float: none;
+	padding: 0;
+	margin: 0;
+	padding-bottom: 1px; /* for Gecko based browsers */
+	margin-bottom: -1px; /* for Gecko based browsers */
+	height: 0;
+}
+
+.Left {
+	float: left;
+}
+
+.Right {
+	float: right;
+}
+
+.Center {
+	text-align: center;	
+}
+
+.NoMargins {
+	margin: 0 !important;
+}
+
+/***** Layout *****/
+
+#Instructions {
+	position: fixed;
+	top: 25px;
+	right: 25px;
+	font-weight: bold;
+}
+
+#Instructions a {
+	display: block;
+	border: 1px solid #000;
+	padding: 10px;
+}
+
+#Container {
+	width: 980px;
+	margin: 20px auto;
+}
+
+#Container #Header {
+	border-bottom: 1px solid #000;
+}
+
+#Container #Header .Right {
+	margin-top: 70px;
+}
+
+#ContentContainer {
+	border-bottom: 1px solid #000;	
+}
+
+#ContentContainer #Navigation {
+	width: 200px;
+	float: left;
+	padding: 5px 0;
+	padding-right: 19px;
+	border-right: 1px solid #000;
+}
+
+#ContentContainer #Navigation li {
+	line-height: 30px;
+	list-style: none;
+	border-bottom: 1px dotted #666;
+}
+
+#ContentContainer #Navigation li.Borderless {
+	border: none;
+}
+
+#ContentContainer #Navigation li a {
+	margin-left: 10px;
+}
+
+
+#ContentContainer #Navigation li ul {
+	margin: 0;
+	margin-bottom: -1px;
+	margin-left: -15px;
+	font-size: 10px;
+}
+
+#ContentContainer #Navigation li ul li {
+	line-height: 18px;
+}
+
+#ContentContainer #Navigation li ul li:last-child {
+	border: 0;
+}
+
+#ContentContainer #Content {
+	padding: 10px 0 40px 10px;
+	width: 750px;
+	text-align: left;
+	float: left;
+	border-left: 1px solid #000;
+	min-height: 100px;
+	margin-left: -1px;
+}
+
+#ContentContainer #Content #Tabs {
+	border-bottom: 1px solid #cdced0;
+	margin-bottom: 20px;
+}
+
+#ContentContainer #Content #Tabs li {
+	width: 150px;
+	height: 33px;
+	background: url('images/tab.jpg') no-repeat top;
+	float: left;
+	list-style: none;
+	text-align: center;
+}
+
+#ContentContainer #Content #Tabs li.active {
+	background: url('images/tab_selected.jpg') no-repeat;
+}
+
+#ContentContainer #Content #Tabs li:hover {
+	background: url('images/tab_hover.jpg') no-repeat;
+}
+
+#ContentContainer #Content #Tabs li a {
+	width: 150px;
+	height: 33px;
+	line-height: 38px;
+	color: #000;
+	text-decoration: none;
+	display: block;
+}
+
+/***** Category Select *****/
+
+.AbsoluteCategory {
+	margin: 0 20px;
+	padding-top: 15px;
+	border-bottom: 1px solid #999;	
+}
+
+.AbsoluteCategory .title {
+	font-size: 14px;
+	color: #999;
+	font-weight: bold;
+}
+
+.cat_primary {
+	float: left;
+	margin: 0 20px;
+}
+
+
+.ManageCategory {
+	margin: 20px;
+}
+
+.ManageCategory .AddCategory {
+	float: left;
+	margin-right: 20px;
+}
+
+.ManageCategory .SelectCategories {
+	float: left;
+	width: 350px;
+}
+
+/***** Product Field Display *****/
+
+fieldset {
+	border: 2px solid #dde1ea;
+	margin: 10px 0;
+}
+
+.Label {
+	line-height: 25px;
+	background: #dde1ea;
+	color: #000;
+	padding-left: 10px;
+	margin: 10px 0;
+}
+
+.Label
+
+.LabelInsert {
+	font-family: arial;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+
+.LabelInsert input.text {
+	font-family: arial;
+	border: 1px solid #CDCED0;
+	padding: 5px;
+	width: 400px;
+}
+
+.LabelInsert input.metatext {
+	font-family: arial;
+	border: 1px solid #CDCED0;
+	padding: 5px;
+	width: 719px;
+}
+
+.LabelInsert select.Cats {
+	font-family: arial;
+	border: 1px solid #CDCED0;
+	padding: 5px;
+	float: right;
+}
+
+.LabelInsert img, .FieldInput img {
+	max-width: 740px;
+	max-height: 150px;
+}
+
+table.LabelInsert {
+	width: 100%;
+}
+
+table.LabelInsert th {
+	border-bottom: 1px solid #666666;
+	padding-bottom: 5px;
+	font-weight: normal;
+	color: #999;
+}
+table.LabelInsert td {
+	padding: 5px 0;
+}
+
+table.LabelInsert td img {
+	border: 1px solid #000;
+}
+
+.PhotogalleryItem, .GalleryItem {
+	display: inline-block;
+	margin: 5px;
+	margin-bottom: 15px;
+	padding: 0;
+	border: 1px solid #dde1ea;
+	position: relative;
+	vertical-align: top;
+}
+
+.PhotogalleryItem a.Edit, .GalleryItem a.Edit {
+	position: absolute;
+	top: -8px;
+	right: -8px;
+}
+
+.PhotogalleryItem a.Edit img, .GalleryItem a.Edit img {
+	width: 16px;
+}
+
+.PhotogalleryItem input.Delete, .GalleryItem input.Delete {
+	width: 12px;
+	position: absolute;
+	right: -6px;
+	bottom: -8px;
+}
+
+.PhotogalleryItem .Contents img, .GalleryItem .Contents img {
+	width: 100px;
+}
+
+.FieldInput .InlineBlock {
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+.FieldInput .InlineBlock.File {
+	display: block;
+	padding: 10px 0;
+	padding-left: 20px;
+	border-left: 1px solid #dde1ea;
+	border-bottom: 1px solid #dde1ea;
+}
+
+.FieldInput.Cats li {
+	list-style: none;
+	display: inline-block;
+	vertical-align: top;
+	width: 48%;
+}
+
+.Cats input[type="checkbox"] {
+	position: relative;
+	top: -2px;
+}
+
+.Submit {
+	text-align: right;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.Submit input {
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #666;
+	letter-spacing: 1px;
+	padding: 5px;
+}
+
+.Title {
+	text-align: left;
+	font-size: 16px;
+	margin: 5px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #686868
+}
+
+.SubTitle {
+	font-size: 12px;
+	margin: 5px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #686868;
+}
+
+.Field {
+	margin: 0 10px;
+	padding: 10px 0;
+	text-align: left;
+	font-family: arial,lucida grande,lucida sans,tahoma,verdana,sans-serif;
+}
+
+div.Textarea div.FieldName {
+	margin-bottom: 5px;
+}
+
+div.Textarea div.FieldName, div.Textarea div.FieldInput {
+	float: none;
+}
+
+.Field .FieldName {
+	float: left;
+	width: 110px;
+	color: #000;
+	margin-right: 10px;
+	border-right: 1px dashed #000;
+}
+
+.Field .FieldInput {
+	float: left;
+	max-width: 600px;
+}
+
+.Field .FieldInput input, .Field .FieldInput textarea {
+	width: 380px;
+}
+
+.add {
+	float: right;
+	width: 150px;
+}
+
+#groupings {
+	float: left;
+}
+
+#groupings .Options {
+	margin-left: 10px;
+}
+
+#groupings .Options .Option {
+	margin-left: 20px;
+	margin-bottom: 20px;
+	width: 680px;
+}
+
+#groupings .Options .Option .Label {
+	width: 680px;
+}
+
+#groupings .Option .FieldName, #groupings .Option .FieldInput {
+	text-align: left;
+	padding-bottom: 5px;
+	float: none;
+	border: none;
+	width: 680px;
+}
+
+#groupings .Option .FieldInput img{
+	text-align: right;
+	border: 1px solid #000;
+}
+
+#groupings .Options .Option .Clear {
+	height: 4px;
+}
+
+#groupings .FieldInput input {
+	width: 150px;
+}
+
+.Continue {
+	margin: 20px;
+	text-align: right;
+}
+
+.Continue input {
+	color: #686868;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+
+/***** Product Edit Display *****/
+
+.EditProduct .Left {
+	float: left;
+	margin-right: 15px;
+}
+
+.EditProduct {
+	margin: 0 10px;
+	padding: 20px 0;
+	text-align: left;
+	font-family: arial,lucida grande,lucida sans,tahoma,verdana,sans-serif;
+	border-bottom: 1px dotted #686868;
+}
+
+.EditProduct .Image img {
+	max-height: 150px;
+}
+
+.Search {
+	text-align: right;
+}
+
+.Search input.Form {
+	padding: 5px;
+	font-size: 10px;
+}
+
+.Search input.Submit {
+	text-transform: uppercase;	
+	font-size: 10px;
+	color: #666;
+	letter-spacing: 1px;
+	padding: 3px;
+	margin: 0;
+}
+
+.EditProduct .Name, .EditProduct .Price {
+	width: 150px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.EditProduct .Categories {
+	float: left;
+	color: #77A5AF;
+	width: 100px;
+}
+
+.EditProduct .Description {
+	float: left;
+	width: 250px;
+}
+
+.Remove {
+	float: left;
+	width: 150px;
+	color: #686868;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+.Removed {
+	border-bottom: 1px solid #77A5AF;
+	color: #77A5AF;
+	font-size: 20px;
+	margin: 0 20px;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+	text-align: center;
+	font-variant:small-caps;
+}
+
+
+.sub {
+	font-size: 11px;
+	margin-top: 5px;
+}
+
+/***** Banner *****/
+
+.Message {
+	background: none repeat scroll 0 0 #ECECEC;
+	border: 1px solid #666666;
+	font-size: 14px;
+	line-height: 40px;
+	margin: 20px;
+	padding: 10px 30px;
+}
+
+
+/***** Category Select *****/
+
+#Footer {
+	margin: 20px auto;
+	text-align: center;
+}
+
+/***** MISC *****/
+
+
+
+#admin_header{
+
+}
+#cats, #pages, #products{
+	display: none;	
+}
+#admin_content{
+	padding-top: 20px;
+	border: 1px solid #999;
+}
+#admin_content_inner{
+	padding: 10px;
+}
+.title{
+	font-weight: 900;
+	font-size: 14px;
+	color: #000;
+}
+.subtitle{
+	font-weight: 900;
+	font-size: 12px;
+	color: #999;	
+}
+#myDiv div{
+	padding: 10px 0;
+}
+.form_table td{
+	padding-bottom: 5px;
+}
+.page_name{
+	font-weight: 900;
+	font-size: 14px;
+//	color: #686868;
+	padding: 0 10px;
+	border-right: 1px solid #c0c0c0;
+}
+.page_title_box{
+	width: 550px;
+}
+td.cat_primary{
+	font-weight: 900;
+	font-size: 12px;
+	padding: 5px;
+	width: 150px;
+	float: none;
+	padding-left: 10px;
+}
+.cat_sub{
+	font-size: 12px;
+	font-weight: 900;
+	color: #030303;
+	padding: 5px;	
+	border: 1px solid #c0c0c0;	
+}
+.cat_sub2{
+	color: #77a5af;
+	padding: 7px 0;
+	font-weight: normal;	
+}
+.news_title{
+	font-size: 18px;
+	color: #333;
+	font-weight: 900;
+}
+.show_page{
+	padding-bottom: 30px;
+}
+.error{
+	color: #cc0000;
+	font-size: 9px;
+}
+
+.note {
+	color: #666;
+	font-size: 10px;
+	margin-top: 4px;
+	display: block;
+}
+
+.ShowCategories .CatPrimary{
+	margin-bottom: 5px;
+}
+
+.ShowCategories form {
+	float: right;
+}
+
+.ShowCategories form input{
+	font-size: 10px;
+	padding: 0;
+}
+
+.ShowCategories .cat_sub2 {
+	height: 15px;
+	border-bottom: 1px dotted #333;
+}
+
+.Modified {
+	font-weight: bold;
+	color: #77A5AF;
+}
+
+
+/***** SORTABLES *****/
+.sortable { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0;
+}
+
+.SortItem {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+}
+
+.SortItem img {
+	width: 100%;
+}
+
+.ui-state-highlight {
+	height: 60px;
+	width: 100px;
+	margin: 5px;
+	margin-bottom: 15px;
+	padding: 0;
+	display: inline-block;
+	border: 1px solid #dde1ea;
+}
+
+/* Subpage Sort */
+
+#sort-list {
+	list-style: none;
+}
+
+#sort-list li {
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid #ccc;
+	line-height: 20px;
+}
+
+#sort-list li .handle {
+	padding-right: 10px;
+	position: relative;
+	top: 4px;
+}
+
+
+/***** CART FEATURES *****/
+
+ul.Categories {
+	line-height: 30px;
+	list-style: none;
+}
+
+ul.Categories ul {
+	list-style: none;
+	list-style-position: inside;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding-left: 10px;
+	margin-left: -15px;
+	position: relative;
+}
+
+ul.Categories li {
+	line-height: 30px;
+	position: relative;
+	padding-left: 15px;
+}
+
+ul.Categories li:nth-of-type(even){
+	background: #eef0f4;
+}
+
+ul.Categories li:nth-of-type(odd){
+	background: #fff;
+}
+
+ul.Categories li:hover {
+	background-color: #DDE1EA;
+}
+
+ul.Categories ul {
+	margin-bottom: 20px;
+}
+
+
+span.AddCat {
+	color: #00aa00;
+	font-size: 16px;
+	font-weight: bold;
+	position: absolute;
+	right: 10px;
+	height: 16px;
+	line-height: 16px;
+	top: 5px;
+	padding: 2px;
+}
+
+span.CatCog {
+	position: absolute;
+	right: 34px;
+	top: 5px;
+	padding: 2px;
+}
+
+span.CatCog img {
+	height: 16px;
+}
+
+span.AddCat:hover, span.CatCog:hover, span.RemoveCat:hover, span.DeleteCat:hover {
+	cursor: pointer;
+	border: 1px solid #fff;
+	margin: -1px;
+}
+
+li.Temp input, li .CatName input {
+	font-family: arial;
+	border: 1px solid #CDCED0;
+	padding: 5px;
+	width: 400px;
+}
+
+.Temp span.RemoveCat, span.DeleteCat {
+	position: absolute;
+	top: 3px;
+	left: 2px;
+	width: 12px;
+	z-index: 10;
+}
+
+.Temp span.RemoveCat img, span.DeleteCat img {
+	width: 12px;
+}
+
+.Error {
+	color: #cc0000;
+	font-weight: bold;
+	padding: 30px;
+	font-size: 14px;
+}
+
+.Details {
+	font-size: 11px;
+	color: #666;
+	padding: 5px 20px;
+	background-color: #eef0f4;
+	margin-bottom: 20px;
+	margin-top: 2px;
+}
+
+/***** Product Overview Layout *****/
+
+.Product {
+	width: 150px;
+	vertical-align: top;
+	display: inline-block;
+	margin: 5px;
+	border: 1px solid #CDCED0;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+}
+
+.Product .img {
+	width: 150px;
+	height: 100px;
+	background-size: cover;
+	background-position: center center;
+}
+
+.Product h3 {
+	font-weight: normal;
+}
+
+.SortItem {
+	position: relative;
+}
+
+.SortItem .Delete {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.ToggleAble {
+	cursor: pointer;
+	position: relative;
+}
+
+.ToggleAble:hover {
+	background: rgba(195,200,209, 1);
+}
+
+.ToggleAble span {
+	position: absolute;
+	right: 20px;
+	top: 0;
+}
+
+.toggle {
+	display: none;
+}
+
+.hide {
+	display: none;
+}
