@@ -1,4 +1,12 @@
-<?php	include('header.php');	?>
+<?php	
+require 'login_check.php';
+
+include 'config_site_info.php';
+include 'array_templates.php';
+include 'db_connect.php';
+include 'functions.php';
+
+include 'header.php';	?>
 
 
 	<div class="Center">
@@ -6,4 +14,4 @@
 	</div>
 
 
-<?php	include('footer.php');	?>
+<?php	include 'footer.php';	?>

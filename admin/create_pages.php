@@ -1,7 +1,7 @@
 <?php
 
-include('header.php');
-include('config.php');
+include 'header.php';
+include 'array_templates.php';
 
 function clean_url($url){
 	$url = strtolower($url);

@@ -1,5 +1,5 @@
 body {
-	padding-top: 28px !important;
+	/*padding-top: 28px !important;*/
 	font-family: verdana,arial,sans-serif;
 	font-size: 12px;
 }
@@ -44,6 +44,11 @@ p {
 table {
 	font-family: verdana,arial,sans-serif;
 }
+
+button {
+	cursor: pointer;
+}
+
 /***** Useful Classes *****/
 
 .Clear {
@@ -88,7 +93,7 @@ table {
 }
 
 #Container {
-	width: 980px;
+	/*min-width: 980px;*/
 	margin: 20px auto;
 }
 
@@ -96,17 +101,35 @@ table {
 	border-bottom: 1px solid #000;
 }
 
+#Container #Header .Logo a {
+	font-size: 3em;
+	color: #000;
+}
+
+#Container #Header .Logo a:hover {
+	text-decoration: none;
+}
+
+#Container #Header .Logo img {
+	vertical-align: bottom;
+}
+
+#Container #Header .Logo img.Text {
+	position: relative;
+	bottom: 1rem;
+}
+
 #Container #Header .Right {
 	margin-top: 70px;
 }
 
 #ContentContainer {
-	border-bottom: 1px solid #000;	
+	border-bottom: 1px solid #000;
+	display: flex;
 }
 
 #ContentContainer #Navigation {
-	width: 200px;
-	float: left;
+	min-width: 200px;
 	padding: 5px 0;
 	padding-right: 19px;
 	border-right: 1px solid #000;
@@ -144,12 +167,11 @@ table {
 
 #ContentContainer #Content {
 	padding: 10px 0 40px 10px;
-	width: 750px;
 	text-align: left;
-	float: left;
 	border-left: 1px solid #000;
 	min-height: 100px;
 	margin-left: -1px;
+	width: 100%;
 }
 
 #ContentContainer #Content #Tabs {
@@ -181,6 +203,12 @@ table {
 	color: #000;
 	text-decoration: none;
 	display: block;
+}
+
+.DottedDivider {
+	width: 200px;
+	border-bottom: 1px dotted #ccc;
+	margin: 10px;
 }
 
 /***** Category Select *****/
@@ -232,38 +260,46 @@ fieldset {
 	margin: 10px 0;
 }
 
-.Label
-
 .LabelInsert {
 	font-family: arial;
 	padding-bottom: 5px;
 	padding-left: 10px;
+	padding-right: 10px;
 }
 
-.LabelInsert input.text {
+.LabelInsert input.text, .LabelInsert input.metatext {
 	font-family: arial;
 	border: 1px solid #CDCED0;
 	padding: 5px;
-	width: 400px;
+	/*width: 400px;*/
+	width: calc(100% - 20px);
 }
 
-.LabelInsert input.metatext {
+/*.LabelInsert input.metatext {
 	font-family: arial;
 	border: 1px solid #CDCED0;
 	padding: 5px;
-	width: 719px;
+	max-width: 720px;
+	width: calc(100% - 20	px);
+}*/
+
+.LabelInsert select {
+	font-family: arial;
+	border: 1px solid #CDCED0;
+	padding: 5px;
 }
 
 .LabelInsert select.Cats {
-	font-family: arial;
-	border: 1px solid #CDCED0;
-	padding: 5px;
 	float: right;
 }
 
 .LabelInsert img, .FieldInput img {
 	max-width: 740px;
 	max-height: 150px;
+}
+
+.LabelInsert.Logo img {
+	margin-right: 20px;
 }
 
 table.LabelInsert {
@@ -294,6 +330,15 @@ table.LabelInsert td img {
 	vertical-align: top;
 }
 
+.PhotogalleryItem img, .GalleryItem img {
+	display: block;
+}
+
+.PhotogalleryItem, .GalleryItem:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
 .PhotogalleryItem a.Edit, .GalleryItem a.Edit {
 	position: absolute;
 	top: -8px;
@@ -311,8 +356,14 @@ table.LabelInsert td img {
 	bottom: -8px;
 }
 
+.GalleryItem .Contents {
+	cursor: pointer;
+}
+
 .PhotogalleryItem .Contents img, .GalleryItem .Contents img {
 	width: 100px;
+	line-height: 0;
+	display: block;
 }
 
 .FieldInput .InlineBlock {
@@ -329,11 +380,22 @@ table.LabelInsert td img {
 	border-bottom: 1px solid #dde1ea;
 }
 
-.FieldInput.Cats li {
+.FieldInput .CategoryList {
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+.FieldInput .CategoryList > li {
+	margin-bottom: .25rem;
+}
+
+.FieldInput .CategoryList li {
 	list-style: none;
-	display: inline-block;
 	vertical-align: top;
-	width: 48%;
+}
+
+.FieldInput .CategoryList li ul {
+	margin: 0;
 }
 
 .Cats input[type="checkbox"] {
@@ -345,9 +407,11 @@ table.LabelInsert td img {
 	text-align: right;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	/*max-width: 740px;*/
+	width: 100%;
 }
 
-.Submit input {
+.Submit input, .Submit a button {
 	text-transform: uppercase;
 	font-size: 12px;
 	color: #666;
@@ -459,6 +523,38 @@ div.Textarea div.FieldName, div.Textarea div.FieldInput {
 	text-transform: uppercase;
 }
 
+/***** Dialog Box - Gallery *****/
+#Dialog {
+
+}
+
+button.dialogue {
+	margin: 0 5px 5px;
+}
+
+#Dialog .FieldInput {
+	display: flex;
+}
+
+#Dialog .FieldInput img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	max-height: 100%;
+
+}
+
+.ui-dialog-buttonset {
+	display: block;
+	width: 100%;
+}
+.ui-dialog-buttonset button {
+	float: right;
+}
+.ui-dialog-buttonset button:first-child {
+	float: left;
+}
+
 
 /***** Product Edit Display *****/
 
@@ -559,6 +655,13 @@ div.Textarea div.FieldName, div.Textarea div.FieldInput {
 #Footer {
 	margin: 20px auto;
 	text-align: center;
+}
+
+/***** Error *****/
+h3.error {
+	font-size: 1.5em;
+	text-align: center;
+	border-bottom: 1px dashed #cc0000
 }
 
 /***** MISC *****/
@@ -747,10 +850,16 @@ ul.Categories li:nth-of-type(odd){
 }
 
 ul.Categories li:hover {
-	background-color: #DDE1EA;
+	background-color: #666;
+	color: #fff;
+	border: 1px solid;
 }
 
-ul.Categories ul {
+ul.Categories li:hover > ul {
+	color: #000;
+}
+
+.CategoryList ul {
 	margin-bottom: 20px;
 }
 
@@ -821,26 +930,67 @@ li.Temp input, li .CatName input {
 
 /***** Product Overview Layout *****/
 
+.ProductList {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.ProductList .SubTitle {
+	display: block;
+	width: 100%;
+}
+
 .Product {
-	width: 150px;
+	width: 100%;
+	min-width: 150px;
 	vertical-align: top;
-	display: inline-block;
-	margin: 5px;
+	/*margin: 5px;*/
 	border: 1px solid #CDCED0;
 	text-align: center;
 	cursor: pointer;
 	position: relative;
+	display: inline-table;
+}
+
+.Product .img img {
+	width: 100%;
+	min-width: 150px;
+	height: auto;
+	max-height: 100%;
+}
+
+.Product h3, .Product h4 {
+	font-weight: normal;
+	margin: 0;
+	padding: 5px 0;
+	color: black;
+}
+
+.Product h4 {
+	font-weight: bold;
+}
+
+.Product:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);	
+}
+
+.Product:hover * {
+	text-decoration: none;
 }
 
 .Product .img {
-	width: 150px;
-	height: 100px;
-	background-size: cover;
-	background-position: center center;
+	font-size: 0;
 }
 
-.Product h3 {
-	font-weight: normal;
+.ProductList .SortItem {
+	width: calc(10% - 6px);
+	margin: 3px;
+	min-width: 150px;
+	display: inline-flex;
+}
+
+.ProductList.HideDelete .Delete {
+	display: none;
 }
 
 .SortItem {
@@ -849,8 +999,9 @@ li.Temp input, li .CatName input {
 
 .SortItem .Delete {
 	position: absolute;
-	bottom: 0;
 	right: 0;
+	top: 0;
+	cursor: pointer;
 }
 
 .ToggleAble {
@@ -874,4 +1025,15 @@ li.Temp input, li .CatName input {
 
 .hide {
 	display: none;
+}
+
+/***** SEARCHING *****/
+.FindProduct, .SearchProducts {
+	max-width: 400px;
+}
+
+button.featuredSearch {
+    padding: 5px 6px;
+    font-size: 12px;
+    line-height: 1em;	
 }

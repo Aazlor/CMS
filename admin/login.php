@@ -1,5 +1,5 @@
 <?php
-require('config_site_info.php');
+require 'config_site_info.php';
 
 if(isset($logged) && $logged == "X")	{$error .= '<tr><td class="error" colspan=3 align="center">You must log in to do that!</td></tr>';}
 

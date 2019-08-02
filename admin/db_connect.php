@@ -7,12 +7,7 @@ ini_set('max_execution_time', 300);
 
 date_default_timezone_set('America/Los_Angeles');
 
-$link = mysqli_connect('localhost', 'root', '')
-    or die('Could not connect: ' . mysql_error());
-
-// mysql_select_db('clients') or die('Could not select database');
-
-$mysqli = new MYSQLI('localhost', 'root', '', 'clients');
+$mysqli = new MYSQLI('localhost', 'root', '', 'live_clients');
 
 if(!function_exists('pre')){
 	function pre($array){

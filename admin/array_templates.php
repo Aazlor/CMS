@@ -18,24 +18,6 @@ $templates = [
 		'Scrolling_Images' => '{gallery}',
 		'Signup_Text' => "{textarea}",
 	],
-	// 'About' => [
-	// 	'File' => "basic.php",
-	// 	'Left_Image{image}' => array(
-	// 		'medium' => array(
-	// 			'width' => 350,
-	// 			'height' => '',
-	// 		),
-	// 	),
-	// 	'{details}1' => 'Image is 350px wide and auto sizes in hieght.  Image not required.',
-	// 	'Content' => "{textarea}",
-	// 	'Bottom_Banner{image}' => array(
-	// 		'medium' => array(
-	// 			'width' => 1200,
-	// 			'height' => 150,
-	// 		),
-	// 	),
-	// 	'{details}2' => 'Banner is 1200px wide with a hieght of 150px.  Image not required.',
-	// ],
 	'About' => [
 		'File' => "basic.php",
 		'Left_Image{image}' => array(
@@ -53,10 +35,8 @@ $templates = [
 			),
 		),
 		'{details}2' => 'Banner is 1200px wide with a hieght of 150px.  Image not required.',
-		'PDF' => '{file}',
+		// 'PDF' => '{file}',
 	],
-
-	/////END TEST
 	'Contact' => [
 		'File' => 'contact.php',
 		'Content' => '{textarea}',
@@ -131,7 +111,8 @@ $templates = [
 		// 	'unchecked' => 'Price'
 		// ),	
 		// 'This_Product_Has_Options{details}' => '<p>Check the box above if a product has multiple sizes, different colors, different prices, or some other variant.</p><p>This will open a tab called "Pricing" just underneath product photos.</p>',
-		'Options' => '{gallery}',	
+		// 'Options' => '{gallery}',	
+		'Sizes' => '{gallery}',	
 		'Price' => '{number}',
 		'Price{details}' => 'Numbers Only.  This field will not let you continue if you put a non-number value.',
 		'Verbage_Price' => '{textarea}',
@@ -150,7 +131,7 @@ $templates = [
 		),
 	],
 ];
-$featured_product_limit = 20;
+$featured_product_limit = 0;
 
 /***** Galleries *****/
 # Medium has to be the last size in the sequence since it modifies the original file based on filename.
@@ -204,16 +185,17 @@ $Gallery = [
 		'Price' => '{number}',
 		'Price{details}' => '<p>Enter the price for this product</p>',
 	],
-	'Gallery__Sizes' => [
+	'Sizes' => [
 		'Type' => 'Size',
 		'Name' => '{text}',
-		'Price_Alteration' => '{text}',
-		'Price_Alteration{details}' => '<p>Enter the price <i>difference</i> between the base price and the price of this option.<br>This can be a flat amount or a percent.  <br> Examples: $1 increase type "+1.00" <br>$.50 decrease enter "-0.50"<br>10% decrease type "-10%"<br>Without the quotes<br>If none, enter 0</p>',
+		'Price' => '{text}',
+		'Price{details}' => '<p>The final price for this size</p>',
+		// 'Price_Alteration{details}' => '<p>Enter the price <i>difference</i> between the base price and the price of this option.<br>This can be a flat amount or a percent.  <br> Examples: $1 increase type "+1.00" <br>$.50 decrease enter "-0.50"<br>10% decrease type "-10%"<br>Without the quotes<br>If none, enter 0</p>',
 	],
 	'Scrolling_Images' => [
 		'Type' => 'Scrolling Image',
 		'Image{image}' => array(
-			'small' => array(
+			'thumb' => array(
 				'maxwidth' => '',
 				'maxheight' => 200,
 			),
@@ -276,7 +258,7 @@ $Product_Settings = [
 			'width' => "250",
 			'height' => ""
 		],
-		'small' => [
+		'thumb' => [
 			'width' => "180",
 			'height' => "180"
 		],
